@@ -33,7 +33,8 @@ table {
 }
 
 tr {
-    background: white none repeat scroll 0% 0%;
+    background: rgb(0, 102, 204) none repeat scroll 0% 0%;
+    color: #fff;
     display: none;
     min-width: 100%;
 }
@@ -42,6 +43,6 @@ tr {
     border-top: none;
 }
 
-.exec-day {
+/* .exec-day {
     display: none;
-}
+} */

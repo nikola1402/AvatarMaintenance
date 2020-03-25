@@ -2,26 +2,23 @@
 var table = document.getElementById("table-main");
 var rows = table.getElementsByTagName("tr");
 
+const blue = "rgb(0, 102, 204) none repeat scroll 0% 0%";
 const white = "white none repeat scroll 0% 0%";
-const green = "rgb(70, 163, 70) none repeat scroll 0% 0%";
-const red = "red none repeat scroll 0% 0%";
+const red = "rgb(204, 51, 51) none repeat scroll 0% 0%";
 
 // When we select row it will change background color based on current color
 // Calls function to move row according to current background color
 async function SelectRow(row) {  
 
-    if (row.style.background == white  || row.style.background == "") {
-        row.style.background = green;
-        // row.style.color = "#fff";
-        console.log("was white is green");
-    } else if (row.style.background == green) {
-        row.style.background = red;
-        // row.style.color = "#fff";
-        console.log("was green is red");
-    } else if (row.style.background == red) {
+    if (row.style.background == blue  || row.style.background == "") {
         row.style.background = white;
-        // row.style.color = "#000";
-        console.log("was red is white");
+        row.style.color = "#000";
+    } else if (row.style.background == white) {
+        row.style.background = red;
+        row.style.color = "#fff";
+    } else if (row.style.background == red) {
+        row.style.background = blue;
+        row.style.color = "#fff";
     }
 
     await Sleep(1200);
@@ -33,7 +30,7 @@ function MoveRow(row) {
     var color = row.style.background;
     row.remove();
 
-    if (color === green) {
+    if (color === white) {
         document.getElementById("table-success").appendChild(row);
     } else if (color === red) {
         document.getElementById("table-fail").appendChild(row);
@@ -41,8 +38,6 @@ function MoveRow(row) {
         document.getElementById("table-main").appendChild(row);
     }
 }
-
-
 
 // Populates table based on selected day
 function ListAvatars(day) {

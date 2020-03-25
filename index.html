@@ -12,50 +12,54 @@
     <body onload="ListAvatars();">
 
         <div id="nav" class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-info select-day" onclick="ListAvatars(-1);">ALL</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-info select-day" onclick="ListAvatars();">TODAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(1);">MONDAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(2);">TUESDAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(3);">WEDNESDAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(4);">THURSDAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(5);">FRIDAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(6);">SATURDAY</button>
-                    </a>
-                    <a class="nav-item nav-link">
-                        <button class="btn btn-secondary select-day" onclick="ListAvatars(7);">SUNDAY</button>
-                    </a>
-                </div>
-            </nav>
+            <ul class="nav my-2">
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-info select-day" onclick="ListAvatars(-1);">ALL</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">
+                    <button class="btn btn-info select-day" onclick="ListAvatars();">TODAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(1);">MONDAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(2);">TUESDAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(3);">WEDNESDAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(4);">THURSDAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(5);">FRIDAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(6);">SATURDAY</button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <button class="btn btn-secondary select-day" onclick="ListAvatars(7);">SUNDAY</button>
+                  </a>
+                </li>
+            </ul>
         </div>
-
-        <!-- <div id="select-day-buttons" class="container py-3">
-            <button class="btn btn-info select-day" onclick="ListAvatars(-1);">SVE</button>
-            <button class="btn btn-info select-day" onclick="ListAvatars();">DANAS</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(1);">PONEDELJAK</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(2);">UTORAK</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(3);">SREDA</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(4);">ČETVRTAK</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(5);">PETAK</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(6);">SUBOTA</button>
-            <button class="btn btn-secondary select-day" onclick="ListAvatars(7);">NEDELJA</button>
-        </div> -->
 
         <div class="container-fluid">
 
@@ -64,8 +68,8 @@
                     <tr style="display: flex;">
                         <th scope="col" class="col-1">#</th>
                         <th scope="col" class="col-4">Avatar Name</th>
-                        <th scope="col" class="col-7">Schedule Name</th>
-                        <th scope="col" style="display: none;">Day of Execution</th>
+                        <th scope="col" class="col-6">Schedule Name</th>
+                        <th scope="col" class="col-1">Day</th>
                     </tr>
                 </thead>
                 <tbody id="table-fail">
@@ -77,32 +81,32 @@
                     <tr>
                         <th scope="row" class="col-1">1</th>
                         <td class="col-4">Avatar 1</td>
-                        <td class="col-7">Tuesday1130, Wednesday1130</td>
-                        <td class="exec-day">1,2,3,4,5</td>
+                        <td class="col-6">Tuesday1130, Wednesday1130</td>
+                        <td class="exec-day col-1">1,2,3,4,5</td>
                     </tr>
                     <tr>
                         <th scope="row" class="col-1">2</th>
                         <td class="col-4">Avatar 2</td>
-                        <td class="col-7">EveryDay0830</td>
-                        <td class="exec-day">1,2,3,5</td>
+                        <td class="col-6">EveryDay0830</td>
+                        <td class="exec-day col-1">1,2,3,5</td>
                     </tr>
                     <tr>
                         <th scope="row" class="col-1">3</th>
                         <td class="col-4">Avatar 3</td>
-                        <td class="col-7">Tuesday1200</td>
-                        <td class="exec-day">3</td>
+                        <td class="col-6">Tuesday1200</td>
+                        <td class="exec-day col-1">3</td>
                     </tr>
                     <tr>
                         <th scope="row" class="col-1">4</th>
                         <td class="col-4">Avatar 4</td>
-                        <td class="col-7">Tuesday1200</td>
-                        <td class="exec-day">2,4,5</td>
+                        <td class="col-6">Tuesday1200</td>
+                        <td class="exec-day col-1">2,4,5</td>
                     </tr>
                     <tr>
                         <th scope="row" class="col-1">5</th>
                         <td class="col-4">Avatar 5</td>
-                        <td class="col-7">Tuesday1200</td>
-                        <td class="exec-day">4</td>
+                        <td class="col-6">Tuesday1200</td>
+                        <td class="exec-day col-1">4</td>
                     </tr>
                 </tbody>
             </table>
