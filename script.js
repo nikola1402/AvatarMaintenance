@@ -3,20 +3,20 @@ var table = document.getElementById("table-main");
 var rows = table.getElementsByTagName("tr");
 
 const blue = "rgb(0, 102, 204) none repeat scroll 0% 0%";
-const white = "white none repeat scroll 0% 0%";
+const white = "rgb(255, 255, 255) none repeat scroll 0% 0%";
 const red = "rgb(204, 51, 51) none repeat scroll 0% 0%";
 
 // When we select row it will change background color based on current color
 // Calls function to move row according to current background color
 async function SelectRow(row) {  
 
-    if (row.style.background == blue  || row.style.background == "") {
+    if (row.style.background.includes("rgb(0, 102, 204)")  || row.style.background == "") {
         row.style.background = white;
         row.style.color = "#000";
-    } else if (row.style.background == white) {
+    } else if (row.style.background.includes("rgb(255, 255, 255)")) {
         row.style.background = red;
         row.style.color = "#fff";
-    } else if (row.style.background == red) {
+    } else if (row.style.background.includes("rgb(204, 51, 51)")) {
         row.style.background = blue;
         row.style.color = "#fff";
     }
@@ -27,12 +27,13 @@ async function SelectRow(row) {
 
 // Detaches selected row and moves it to a table according to current row background color
 function MoveRow(row) {
+
     var color = row.style.background;
     row.remove();
 
-    if (color === white) {
+    if (color.includes("rgb(255, 255, 255)")) {
         document.getElementById("table-success").appendChild(row);
-    } else if (color === red) {
+    } else if (color.includes("rgb(204, 51, 51)")) {
         document.getElementById("table-fail").appendChild(row);
     } else {
         document.getElementById("table-main").appendChild(row);
