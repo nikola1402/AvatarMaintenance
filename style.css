@@ -1,0 +1,47 @@
+body {
+    background: #0c0910;
+}
+
+#select-day-buttons {
+    min-width: -moz-fit-content;
+    min-width: -webkit-fill-available;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav {
+    min-width: -moz-fit-content;
+    min-width: -webkit-fill-available;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.select-day {
+    min-width: 125px;
+    margin-top: 10px;
+}
+
+table {
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr {
+    background: white none repeat scroll 0% 0%;
+    display: none;
+    min-width: 100%;
+}
+
+.table td, .table th {
+    border-top: none;
+}
+
+.exec-day {
+    display: none;
+}
