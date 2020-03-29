@@ -12,7 +12,8 @@ function Setup() {
 
 function GetData() {
 
-    var url = "robot_runs_maintenance.xlsx";
+    
+    var url = "../robot_runs_maintenance.xlsx";
 
     /* set up async GET request */
     var req = new XMLHttpRequest();
