@@ -8,7 +8,6 @@ const tableFail = document.getElementById("table-fail");
 
 function Setup() {
     GetData();
-    AddRowListeners();
 }
 
 function GetData() {
@@ -70,6 +69,7 @@ function PopulateTable(jsonArray) {
     });
 
     ListAvatars();
+    AddRowListeners();
 }
 
 
